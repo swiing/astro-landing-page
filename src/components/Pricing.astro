@@ -1,14 +1,12 @@
 ---
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import Card from "@/components/ui/card/Card.astro";
+import CardHeader from "@/components/ui/card/CardHeader.astro";
+import CardTitle from "@/components/ui/card/CardTitle.astro";
+import CardDescription from "@/components/ui/card/CardDescription.astro";
+import CardContent from "@/components/ui/card/CardContent.astro";
+import CardFooter from "@/components/ui/card/CardFooter.astro";
 import { Check } from "lucide-react";
 
 enum PopularPlanType {
@@ -93,15 +91,14 @@ const pricingList: PricingProps[] = [
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     {pricingList.map((pricing: PricingProps) => (
       <Card
-        key={pricing.title}
-        className={
+        class={
           pricing.popular === PopularPlanType.YES
             ? "drop-shadow-xl shadow-black/10 dark:shadow-white/10"
             : ""
         }
       >
         <CardHeader>
-          <CardTitle className="flex item-center justify-between">
+          <CardTitle class="flex item-center justify-between">
             {pricing.title}
             {pricing.popular === PopularPlanType.YES ? (
               <Badge
@@ -126,7 +123,7 @@ const pricingList: PricingProps[] = [
 
         <hr class="w-4/5 m-auto mb-4" />
 
-        <CardFooter className="flex">
+        <CardFooter class="flex">
           <div class="space-y-4">
             {pricing.benefitList.map((benefit: string) => (
               <span class="flex">

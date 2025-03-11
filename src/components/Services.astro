@@ -1,6 +1,9 @@
 ---
 import { type JSX } from "react";
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import Card from "./ui/card/Card.astro";
+import CardHeader from "./ui/card/CardHeader.astro";
+import CardTitle from "./ui/card/CardTitle.astro";
+import CardDescription from "./ui/card/CardDescription.astro";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
 import cubeLeg from "../assets/cube-leg.png";
 
@@ -49,14 +52,14 @@ const serviceList: ServiceProps[] = [
 
       <div class="flex flex-col gap-8">
         {serviceList.map(({ icon: Icon, title, description }: ServiceProps) => (
-          <Card key={title}>
-            <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
+          <Card>
+            <CardHeader class="space-y-1 flex md:flex-row justify-start items-start gap-4">
               <div class="mt-1 bg-primary/20 p-1 rounded-2xl">
                 <Icon />
               </div>
               <div>
                 <CardTitle>{title}</CardTitle>
-                <CardDescription className="text-md mt-2">
+                <CardDescription class="text-md mt-2">
                   {description}
                 </CardDescription>
               </div>

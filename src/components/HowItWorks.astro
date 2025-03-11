@@ -1,6 +1,9 @@
 ---
 import { type JSX } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import Card from "./ui/card/Card.astro";
+import CardHeader from "./ui/card/CardHeader.astro";
+import CardTitle from "./ui/card/CardTitle.astro";
+import CardContent from "./ui/card/CardContent.astro";
 import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
 
 interface FeatureProps {
@@ -55,11 +58,10 @@ const features: FeatureProps[] = [
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     {features.map(({ icon:Icon, title, description }: FeatureProps) => (
       <Card
-        key={title}
-        className="bg-muted/50"
+        class="bg-muted/50"
       >
         <CardHeader>
-          <CardTitle className="grid gap-4 place-items-center">
+          <CardTitle class="grid gap-4 place-items-center">
             <Icon />
             {title}
           </CardTitle>
