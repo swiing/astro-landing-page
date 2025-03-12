@@ -9,7 +9,7 @@ import {
 import { Menu } from "lucide-react";
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "../button";
+import { buttonVariants } from "../Button.astro";
 
 export interface RouteProps {
   href: string;
