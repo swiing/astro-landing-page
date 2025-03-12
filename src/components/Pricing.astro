@@ -1,5 +1,5 @@
 ---
-import { Badge } from "@/components/ui/badge";
+import Badge from "@/components/ui/Badge.astro";
 import Button from "@/components/ui/Button.astro";
 import Card from "@/components/ui/card/Card.astro";
 import CardHeader from "@/components/ui/card/CardHeader.astro";
@@ -103,7 +103,7 @@ const pricingList: PricingProps[] = [
             {pricing.popular === PopularPlanType.YES ? (
               <Badge
                 variant="secondary"
-                className="text-sm text-primary"
+                class="text-sm text-primary"
               >
                 Most popular
               </Badge>

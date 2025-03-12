@@ -1,5 +1,5 @@
 ---
-import { Badge } from "./ui/badge";
+import Badge from "./ui/Badge.astro";
 import Card from "./ui/card/Card.astro";
 import CardHeader from "./ui/card/CardHeader.astro";
 import CardTitle from "./ui/card/CardTitle.astro";
@@ -65,7 +65,7 @@ const featureList: string[] = [
       <div>
         <Badge
           variant="secondary"
-          className="text-sm"
+          class="text-sm"
         >
           {feature}
         </Badge>
