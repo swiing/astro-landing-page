@@ -1,12 +1,31 @@
 ---
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/Button.astro";
-import { ReactNavigationMenu } from "./ui/NavigationMenu"
+import { ReactNavigationMenu } from "./ui/custom/NavigationMenu"
 import ModeToggle from  "./ui/ModeToggle.astro";
 
 import { LogoIcon } from "./Icons";
 
-import { Sheet as ReactSheet, routeList, type RouteProps } from "./ui/custom/Sheet";
+import { Sheet as ReactSheet, type RouteProps } from "./ui/custom/Sheet";
+
+const routeList: RouteProps[] = [
+  {
+    href: "#features",
+    label: "Features",
+  },
+  {
+    href: "#testimonials",
+    label: "Testimonials",
+  },
+  {
+    href: "#pricing",
+    label: "Pricing",
+  },
+  {
+    href: "#faq",
+    label: "FAQ",
+  },
+];
 ---
 
 <header class="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
@@ -28,7 +47,7 @@ import { Sheet as ReactSheet, routeList, type RouteProps } from "./ui/custom/She
         <span class="flex md:hidden">
           <ModeToggle />
 
-          <ReactSheet client:only="react"/>
+          <ReactSheet routeList={routeList} client:only="react"/>
         </span>
 
         {/* desktop */}

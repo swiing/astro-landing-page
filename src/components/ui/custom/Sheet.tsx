@@ -16,26 +16,7 @@ export interface RouteProps {
   label: string;
 }
 
-export const routeList: RouteProps[] = [
-  {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
-];
-
-export const Sheet = () => {
+export const Sheet: React.FC<{ routeList: RouteProps[]; }> = ({routeList}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   
   return (

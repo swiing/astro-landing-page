@@ -4,12 +4,10 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
-export type NavigationMenuProps = {
+export const ReactNavigationMenu: React.FC<{
   children: any
   item?: any
-}
-
-export function ReactNavigationMenu({children, item}: NavigationMenuProps) {
+}> = ({children, item}) => {
   return (
     <NavigationMenu className="mx-auto">
       <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
