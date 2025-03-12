@@ -1,0 +1,64 @@
+---
+---
+
+{/* This is intentionally inlined to avoid FOUC. */}
+<script is:inline>
+	/** Key in `localStorage` to store color theme preference at. */
+	const storageKey = 'vite-ui-theme'
+
+	/** Get a typesafe theme string from any JS value (unknown values are coerced to `'system'`). */
+	const parseTheme = (theme) =>
+		theme === 'system' || theme === 'dark' || theme === 'light' ? theme : 'system';
+
+	/** Store the user’s preference in `localStorage`. */
+	function storeTheme(theme) {
+		if (typeof localStorage !== 'undefined') {
+			localStorage.setItem(storageKey, theme === 'light' || theme === 'dark' ? theme : '');
+		}
+	}
+
+	/** Get the preferred system color scheme. */
+	const getPreferredColorScheme = () =>
+		matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+	window.ThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem(storageKey);
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.classList.remove(theme === 'light' ? 'dark' : 'light');
+        document.documentElement.classList.add(theme === 'light' ? 'light' : 'dark')
+		return {
+			/** Update document theme, and local storage state. */
+			onThemeChange(theme) {
+				theme = parseTheme(theme)
+				theme = theme === 'system' ? getPreferredColorScheme() : theme
+				document.documentElement.classList.remove(theme === 'light' ? 'dark' : 'light');
+				document.documentElement.classList.add(theme);
+				storeTheme(theme);
+			}
+		};
+	})();
+</script>
+
+<!--  -->
+
+{/* Inlined to avoid FOUC. Uses global scope from `ThemeProvider.astro` */}
+<script is:inline>
+	// type Theme = 'system' | 'dark' | 'light';
+
+	/** Key in `localStorage` to store color theme preference at. */
+	// const storageKey = 'vite-ui-theme';
+
+	/** Load the user’s preference from `localStorage`. */
+	const loadTheme = () =>
+		parseTheme(typeof localStorage !== 'undefined' && localStorage.getItem(storageKey));
+
+	// React to changes in system color scheme.
+	matchMedia(`(prefers-color-scheme: light)`).addEventListener('change', () => {
+		if (loadTheme() === 'system') window.ThemeProvider.onThemeChange('system');
+	});
+
+  	window.ThemeProvider.onThemeChange(loadTheme());
+</script>

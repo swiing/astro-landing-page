@@ -1,0 +1,66 @@
+---
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { buttonVariants } from "./ui/button";
+import { ReactNavigationMenu } from "./ui/NavigationMenu"
+import ModeToggle from  "./ui/ModeToggle.astro";
+
+import { LogoIcon } from "./Icons";
+
+import { Sheet as ReactSheet, routeList, type RouteProps } from "./ui/custom/Sheet";
+---
+
+<header class="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+  <ReactNavigationMenu>
+
+      <a
+        rel="noreferrer noopener"
+        href="/"
+        class="ml-2 font-bold text-xl flex"
+        slot="item"
+      >
+        <LogoIcon />
+        ShadcnUI/React
+      </a>
+
+      <Fragment>
+
+        {/* mobile */}
+        <span class="flex md:hidden">
+          <ModeToggle />
+
+          <ReactSheet client:only="react"/>
+        </span>
+
+        {/* desktop */}
+        <nav class="hidden md:flex gap-2">
+          {routeList.map((route: RouteProps, i) => (
+            <a
+              rel="noreferrer noopener"
+              href={route.href}
+              class={`text-[17px] ${buttonVariants({
+                variant: "ghost",
+              })}`}
+            >
+              {route.label}
+            </a>
+          ))}
+        </nav>
+
+        <div class="hidden md:flex gap-2">
+          <a
+            rel="noreferrer noopener"
+            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+            target="_blank"
+            class={`border ${buttonVariants({ variant: "secondary" })}`}
+          >
+            <GitHubLogoIcon className="mr-2 w-5 h-5" />
+            Github
+          </a>
+
+          <ModeToggle />
+        </div>
+
+      </Fragment>
+    
+  </ReactNavigationMenu>
+</header>
