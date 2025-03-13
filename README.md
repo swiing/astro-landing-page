@@ -1,13 +1,63 @@
-# Astro with Tailwind
+# Astro/Tailwind Landing Page Template
 
-```sh
-npm create astro@latest -- --template with-tailwindcss
+## <a href="https://astro.build/" target="_blank">Astro</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
+
+![astro-landing-page](https://github.com/leoMirandaa/shadcn-landing-page/assets/61714687/3ba7b51f-9589-4541-800a-5ab7cecad1b5)
+
+Build your Astro landing page effortlessly with the required sections to your project. <a href="https://astro-landing-page-phi.vercel.app/" target="_blank">Live Demo</a>
+
+## Sections
+
+- [x] Navbar
+- [x] Sidebar(mobile)
+- [x] Hero
+- [x] Sponsors
+- [x] About
+- [x] Stats
+- [x] How It Works
+- [x] Features
+- [x] Services
+- [x] Call-to-Action (CTA)
+- [x] Testimonials
+- [x] Team
+- [x] Pricing
+- [x] Newsletter
+- [x] Frequently Asked Questions(FAQ)
+- [x] Footer
+
+## Features
+
+- [x] Fully Responsive Design
+- [x] User Friendly Navigation
+- [x] Dark Mode
+- [x] Meta tags
+
+## How to install
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/swiing/astro-landing-page.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+2. Go into project
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+```bash
+cd astro-landing-page
+```
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Run project
+
+```bash
+npm run dev
+```
+
+# Credits
+
+This is a port to Astro of [shadcn-landing-page](https://github.com/leoMirandaa/shadcn-landing-page).
