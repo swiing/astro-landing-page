@@ -4,7 +4,7 @@ import { buttonVariants } from "./ui/button";
 import { ReactNavigationMenu } from "./ui/custom/NavigationMenu"
 import ModeToggle from  "./ui/ModeToggle.astro";
 
-import { LogoIcon } from "./Icons";
+import LogoIcon from "../assets/icons/logo.svg";
 
 import { Sheet as ReactSheet, type RouteProps } from "./ui/custom/Sheet";
 
@@ -37,7 +37,7 @@ const routeList: RouteProps[] = [
         class="ml-2 font-bold text-xl flex"
         slot="item"
       >
-        <LogoIcon />
+        <LogoIcon mode="sprite" />
         Astro/Tailwind
       </a>
 

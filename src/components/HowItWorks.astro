@@ -1,13 +1,15 @@
 ---
-import { type JSX } from "react";
 import Card from "./ui/card/Card.astro";
 import CardHeader from "./ui/card/CardHeader.astro";
 import CardTitle from "./ui/card/CardTitle.astro";
 import CardContent from "./ui/card/CardContent.astro";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import MedalIcon from "../assets/icons/medal.svg";
+import MapIcon from "../assets/icons/map.svg";
+import PlaneIcon from "../assets/icons/plane.svg";
+import GiftIcon from "../assets/icons/gift.svg";
 
 interface FeatureProps {
-  icon: () => JSX.Element;
+  icon: typeof MedalIcon; 
   title: string;
   description: string;
 }

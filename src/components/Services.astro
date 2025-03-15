@@ -1,16 +1,17 @@
 ---
-import { type JSX } from "react";
 import Card from "./ui/card/Card.astro";
 import CardHeader from "./ui/card/CardHeader.astro";
 import CardTitle from "./ui/card/CardTitle.astro";
 import CardDescription from "./ui/card/CardDescription.astro";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
+import MagnifierIcon from "../assets/icons/magnifier.svg";
+import WalletIcon from "../assets/icons/wallet.svg";
+import ChartIcon from "../assets/icons/chart.svg";
 import cubeLeg from "../assets/cube-leg.png";
 
 interface ServiceProps {
   title: string;
   description: string;
-  icon: () => JSX.Element;
+  icon: typeof MagnifierIcon;
 }
 
 const serviceList: ServiceProps[] = [
