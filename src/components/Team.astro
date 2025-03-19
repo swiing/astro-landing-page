@@ -6,7 +6,9 @@ import CardTitle from "@/components/ui/card/CardTitle.astro";
 import CardDescription from "@/components/ui/card/CardDescription.astro";
 import CardContent from "@/components/ui/card/CardContent.astro";
 import CardFooter from "@/components/ui/card/CardFooter.astro";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import Facebook from "lucide-static/icons/facebook.svg";
+import Instagram from "lucide-static/icons/instagram.svg";
+import Linkedin from "lucide-static/icons/linkedin.svg";
 
 interface TeamProps {
   imageUrl: string;
@@ -142,7 +144,7 @@ const teamList: TeamProps[] = [
                   })}
                 >
                   <span class="sr-only">{name} icon</span>
-                  <SocialIcon size="20" />
+                  <SocialIcon mode="sprite" size="20" />
                 </a>
               </div>
             ))}

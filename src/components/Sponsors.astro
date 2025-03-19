@@ -1,8 +1,8 @@
 ---
-import { Radar, type LucideProps } from "lucide-react";
+import Radar from "lucide-static/icons/radar.svg"
 
 interface SponsorProps {
-  icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
+  icon: typeof Radar
   name: string;
 }
 
@@ -47,7 +47,7 @@ const sponsors: SponsorProps[] = [
       <div
         class="flex items-center gap-1 text-muted-foreground/60"
       >
-        <span><Icon size={34} /></span>
+        <span><Icon mode="sprite" size={34} /></span>
         <h3 class="text-xl  font-bold">{name}</h3>
       </div>
     ))}

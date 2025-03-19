@@ -9,7 +9,8 @@ import CardTitle from "@/components/ui/card/CardTitle.astro";
 import CardDescription from "@/components/ui/card/CardDescription.astro";
 import CardContent from "@/components/ui/card/CardContent.astro";
 import CardFooter from "@/components/ui/card/CardFooter.astro";
-import { Check, Linkedin } from "lucide-react";
+import Check from "lucide-static/icons/check.svg";
+import Linkedin from "lucide-static/icons/linkedin.svg";
 import LightBulbIcon from "@/assets/icons/lightbulb.svg";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 ---
@@ -95,7 +96,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
           })}
         >
           <span class="sr-only">Linkedin icon</span>
-          <Linkedin size="20" />
+          <Linkedin mode="sprite" size="20" />
         </a>
       </div>
     </CardFooter>
@@ -134,7 +135,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
         {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
           (benefit: string) => (
             <span class="flex">
-              <Check className="text-green-500" />{" "}
+              <Check mode="sprite" class="text-green-500" />{" "}
               <h3 class="ml-2">{benefit}</h3>
             </span>
           )

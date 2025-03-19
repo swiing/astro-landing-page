@@ -7,7 +7,7 @@ import CardTitle from "@/components/ui/card/CardTitle.astro";
 import CardDescription from "@/components/ui/card/CardDescription.astro";
 import CardContent from "@/components/ui/card/CardContent.astro";
 import CardFooter from "@/components/ui/card/CardFooter.astro";
-import { Check } from "lucide-react";
+import Check from "lucide-static/icons/check.svg";
 
 enum PopularPlanType {
   NO = 0,
@@ -127,7 +127,7 @@ const pricingList: PricingProps[] = [
           <div class="space-y-4">
             {pricing.benefitList.map((benefit: string) => (
               <span class="flex">
-                <Check className="text-green-500" />{" "}
+                <Check mode="sprite" class="text-green-500" />{" "}
                 <h3 class="ml-2">{benefit}</h3>
               </span>
             ))}
