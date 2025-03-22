@@ -2,7 +2,8 @@
 import Button from "./ui/Button.astro";
 import { buttonVariants } from "./ui/button";
 import HeroCards from "./HeroCards.astro";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
+import GitHubLogoIcon from "../assets/icons/github.svg";
 ---
 
     <section class="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
@@ -40,7 +41,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
             })}`}
           >
             Github Repository
-            <GitHubLogoIcon className="ml-2 w-5 h-5" />
+            <GitHubLogoIcon class="ml-2 w-5 h-5" />
           </a>
         </div>
       </div>

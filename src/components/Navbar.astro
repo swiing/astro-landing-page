@@ -1,10 +1,10 @@
 ---
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "./ui/button";
 import { ReactNavigationMenu } from "./ui/custom/NavigationMenu"
 import ModeToggle from  "./ui/ModeToggle.astro";
 
 import LogoIcon from "../assets/icons/logo.svg";
+import GitHubLogoIcon from "../assets/icons/github.svg";
 
 import { Sheet as ReactSheet, type RouteProps } from "./ui/custom/Sheet";
 
@@ -72,7 +72,7 @@ const routeList: RouteProps[] = [
             target="_blank"
             class={`border ${buttonVariants({ variant: "secondary" })}`}
           >
-            <GitHubLogoIcon className="mr-2 w-5 h-5" />
+            <GitHubLogoIcon class="mr-2 w-5 h-5" />
             Github
           </a>
 

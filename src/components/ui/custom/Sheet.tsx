@@ -8,7 +8,8 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import GitHubLogoIcon from "../../../assets/icons/github.svg?raw";
+
 import { buttonVariants } from "../button";
 
 export interface RouteProps {
@@ -59,7 +60,7 @@ export const Sheet: React.FC<{ routeList: RouteProps[]; }> = ({routeList}) => {
               variant: "secondary",
           })}`}
           >
-          <GitHubLogoIcon className="mr-2 w-5 h-5" />
+          <div className="mr-2 w-5 h-5" dangerouslySetInnerHTML={{ __html: GitHubLogoIcon }} />
           Github
           </a>
         </nav>
