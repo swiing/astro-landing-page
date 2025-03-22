@@ -1,6 +1,6 @@
 # Astro/Tailwind Landing Page Template
 
-## <a href="https://astro.build/" target="_blank">Astro</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
+## <a href="https://astro.build/" target="_blank">Astro v5</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind v4</a>.
 
 ![astro-landing-page](https://github.com/leoMirandaa/shadcn-landing-page/assets/61714687/3ba7b51f-9589-4541-800a-5ab7cecad1b5)
 
