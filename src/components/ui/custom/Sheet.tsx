@@ -6,7 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import Menu from "lucide-static/icons/menu.svg?raw";
 
 import GitHubLogoIcon from "../../../assets/icons/github.svg?raw";
 
@@ -26,9 +26,8 @@ export const Sheet: React.FC<{ routeList: RouteProps[]; }> = ({routeList}) => {
       onOpenChange={setIsOpen}
     >
       <SheetTrigger className="px-2">
-        <Menu className="flex md:hidden h-5 w-5">
-          <span className="sr-only">Menu Icon</span>
-        </Menu>
+        <span className="flex md:hidden [&>svg]:h-5 [&>svg]:w-5" dangerouslySetInnerHTML={{ __html: Menu }}/>
+        <span className="sr-only">Menu Icon</span>
       </SheetTrigger>
 
       <SheetContent side={"left"}>
