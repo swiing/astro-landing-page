@@ -26,10 +26,7 @@ export const Sheet: React.FC<{ routeList: RouteProps[]; }> = ({routeList}) => {
       onOpenChange={setIsOpen}
     >
       <SheetTrigger className="px-2">
-        <Menu
-            className="flex md:hidden h-5 w-5"
-            onClick={() => setIsOpen(true)}
-        >
+        <Menu className="flex md:hidden h-5 w-5">
           <span className="sr-only">Menu Icon</span>
         </Menu>
       </SheetTrigger>
