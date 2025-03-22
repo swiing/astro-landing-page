@@ -4,7 +4,7 @@
 
 ![astro-landing-page](https://github.com/leoMirandaa/shadcn-landing-page/assets/61714687/3ba7b51f-9589-4541-800a-5ab7cecad1b5)
 
-Build your Astro landing page effortlessly with the required sections to your project. <a href="https://astro-landing-page-phi.vercel.app/" target="_blank">Live Demo</a>
+Build your Astro landing page effortlessly with the required sections to your project. <a href="https://astro-landing-page-template.vercel.app/" target="_blank">Live Demo</a>
 
 ## Sections
 
