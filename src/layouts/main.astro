@@ -1,6 +1,7 @@
 ---
-import '../styles/global.css';
-const { content } = Astro.props;
+const title = "Astro/Tailwind - Landing template"
+const description = "Free Astro v5 landing page, powered by Tailwind v4"
+const url = "https://github.com/swiing/astro-landing-page.git"
 ---
 
 <html lang="en">
@@ -8,16 +9,16 @@ const { content } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
 		<!-- Primary Meta Tags -->
-		<title>Astro/Tailwind - Landing template</title>
 		<meta
 		  name="title"
-		  content="Astro/Tailwind - Landing template"
+		  content={title}
 		/>
 		<meta
 		  name="description"
-		  content="Free Astro v5 landing page, powered by Tailwind v4"
+		  content={description}
 		/>
 		<!-- Open Graph / Facebook -->
 		<meta
@@ -26,15 +27,15 @@ const { content } = Astro.props;
 		/>
 		<meta
 		  property="og:url"
-		  content="https://github.com/swiing/astro-landing-page.git"
+		  content={url}
 		/>
 		<meta
 		  property="og:title"
-		  content="Astro/Tailwind - Landing template"
+		  content={title}
 		/>
 		<meta
 		  property="og:description"
-		  content="Free Astro v5 landing page, powered by Tailwind v4"
+		  content={description}
 		/>
 		<!-- <meta
 		  property="og:image"
@@ -49,15 +50,15 @@ const { content } = Astro.props;
 	
 		<meta
 		  name="twitter:url"
-		  content="https://github.com/swiing/astro-landing-page.git"
+		  content={title}
 		/>
 		<meta
 		  name="twitter:title"
-		  content="Atsro/Tailwind - Landing template"
+		  content={title}
 		/>
 		<meta
 		  name="twitter:description"
-		  content="Free Astro v5 landing page, powered by Tailwind v4"
+		  content={description}
 		/>
 		<!-- <meta
 		  name="twitter:image"

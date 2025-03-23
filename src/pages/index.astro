@@ -1,6 +1,5 @@
 ---
-import '../styles/index.css'
-import '../styles/App.css'
+import Layout from '../layouts/main.astro';
 
 // Component Imports
 import About from "@/components/About.astro";
@@ -19,33 +18,28 @@ import Sponsors from "@/components/Sponsors.astro";
 import Team from "@/components/Team.astro";
 import Testimonials from "@/components/Testimonials.astro";
 import ThemeProvider from '@/components/ThemeProvider.astro';
+
+import '../styles/index.css'
+import '../styles/App.css'
+
+export const title = "Astro/Tailwind - Landing template2"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
-
-	<body>
-		<ThemeProvider />
-		<Navbar />
-		<Hero />
-		<Sponsors />
-		<About />
-		<HowItWorks />
-		<Features />
-		<Services />
-		<Cta />
-		<Testimonials />
-		<Team />
-		<Pricing />
-		<Newsletter />
-		<FAQ />
-		<Footer />
-		<ScrollToTop />
-	</body>
-</html>
+<Layout>
+	<ThemeProvider />
+	<Navbar />
+	<Hero />
+	<Sponsors />
+	<About />
+	<HowItWorks />
+	<Features />
+	<Services />
+	<Cta />
+	<Testimonials />
+	<Team />
+	<Pricing />
+	<Newsletter />
+	<FAQ />
+	<Footer />
+	<ScrollToTop />
+</Layout>
